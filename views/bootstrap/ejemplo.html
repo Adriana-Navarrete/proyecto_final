@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                $("#boton1").click(function() {
+                    alert("no lo logro");
+                    $("p").hide();
+                });
+            });
+
+            $(document).ready(function() {
+                $(".boton2").mouseleave(function() {
+                    $("h2").hide();
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <h2>Esto se va con el boton2</h2>
+        <p>Esto se va con el boton1</p>
+        <p class="clase1">Esto se va con el boton1</p>
+        <button id="boton1">boton1</button>
+        <button class="boton2">boton2</button>
+    </body>
+</html>
