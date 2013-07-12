@@ -14,6 +14,7 @@
         private $numero_control;
 
         function __construct() {
+            ;
             $this->Modelo();
         } 
 
