@@ -7,7 +7,7 @@
         function Modelo(){
                 $this->db = ADONewConnection('mysql');
                 $this->db->debug = true;
-                $this->db->Connect('localhost','root','vicgame1991','proyecto');
+                $this->db->Connect('localhost','root','','proyecto');
         }
 
         public function consulta_datos(){

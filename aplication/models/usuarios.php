@@ -24,8 +24,8 @@
                              );
 
         function __construct() {
-            ;
-            $this->Modelo();
+            
+            $this->Modelo_usuarios();
         }
         
         public function get_atributos(){
