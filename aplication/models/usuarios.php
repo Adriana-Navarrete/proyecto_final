@@ -12,11 +12,29 @@
         private $email;
         private $nctr_rfc;
         private $numero_control;
+        
+        private $atributos = array('apellido_paterno'=>array(), 
+                                   'apellido_materno'=>array(),
+                                   'nombre'=>array(),
+                                   'sexo'=>array(), 
+                                   'edad'=>array(), 
+                                   'email'=>array(), 
+                                   'nctr_rfc'=>array(),
+                                   'numero_control'=>array()
+                             );
 
         function __construct() {
             ;
             $this->Modelo();
-        } 
+        }
+        
+        public function get_atributos(){
+            $rs = array();
+            foreach ($this->atributos as $key=> $value){
+                $rs[$key]=$this->$key;
+            }
+            return $rs;
+        }
 
         public function get_id_asistente(){
                 return $this->id_asistente;

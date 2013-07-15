@@ -16,16 +16,16 @@
             return $rs;
         }
         
-        public function inserta_datos(){
-            $rs = array();
-            $rs['apellido_paterno']='GALVAN';
-            $rs['apellido_materno']='MEXICANO';
-            $rs['nombre']='VICTOR';
-            $rs['sexo']='M';
-            $rs['edad']='21';
-            $rs['email']='victor.mexicano@hotmail.com';
-            $rs['nctr_rfc']='GAMV911104HY4';
-            $rs['numero_control']='09030791';
+        public function inserta_datos($rs){
+            //$rs = array();
+            //$rs['apellido_paterno']='GALVAN';
+            //$rs['apellido_materno']='MEXICANO';
+            //$rs['nombre']='VICTOR';
+            //$rs['sexo']='M';
+            //$rs['edad']='21';
+            //$rs['email']='victor.mexicano@hotmail.com';
+            //$rs['nctr_rfc']='GAMV911104HY4';
+            //$rs['numero_control']='09030791';
             $sql_insert = $this->db->GetInsertSQL($this->nombre_tabla,$rs);
             $this->get_error($this->db->Execute($sql_insert),'Error en Modelo.inserta');
         }
@@ -64,9 +64,14 @@
             }
         }
         
-        public function elimina(){
+        public function elimina($id_asistente = 'null'){
+            if($id_asistente == 'null'){
                 $sql = "delete from ".$this->nombre_tabla;
-                $this->get_error($this->db->Execute($sql), 'Error al eliminar');
+            }
+            else{
+                $sql = "delete from ".$this->nombre_tabla." where id_asistente = ".$id_asistente;
+            }
+            $this->get_error($this->db->Execute($sql), 'Error al eliminar');
         }
 
     }
