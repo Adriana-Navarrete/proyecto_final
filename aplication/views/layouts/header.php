@@ -52,7 +52,7 @@
                         <a href="_form_login.html">LOGIN</a>
                     </li>
                     <li class="active">
-                        <a href="../site/registro.php">USUARIOS</a>
+                        <a href="../site/form_usuarios.php">USUARIOS</a>
                     </li>
                     <li class="active">
                         <a href="-form-actividades.html">ACTIVIDADES</a>

@@ -1,6 +1,6 @@
 <?php
 
-    class Usuarios extends Modelo{
+    class Usuarios extends Modelo_usuarios{
 
         public  $nombre_tabla = 'usuarios';
         private $id_asistente;
